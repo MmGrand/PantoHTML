@@ -1,0 +1,48 @@
+.header {
+	padding-top: 40px;
+
+	background-color: var(--footer-bg);
+	background-image: url('./../../img/header/header-bg.jpg');
+	background-size: cover;
+	aspect-ratio: 1440 / 1084;
+
+	color: var(--header-text-color);
+
+	@include retina-bg(url('./../../img/header/header-bg@2x.jpg'));
+
+	a {
+		color: var(--header-text-color);
+	}
+
+	&__nav {
+		margin-bottom: 86px;
+	}
+
+	&__content {
+		text-align: center;
+
+		& p {
+			margin: 0 auto;
+			max-width: 606px;
+
+			font-size: 24px;
+			line-height: 160%;
+
+			opacity: 0.8;
+		}
+	}
+
+	&__title {
+		margin-bottom: 14px;
+
+		font-weight: 700;
+		font-size: 80px;
+		line-height: 130%;
+		letter-spacing: -0.01em;
+		text-transform: capitalize;
+	}
+
+	&__search {
+		margin: 45px auto 0;
+	}
+}
