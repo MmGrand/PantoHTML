@@ -1,14 +1,15 @@
 .header {
+	position: relative;
 	padding-top: 40px;
 
 	background-color: var(--footer-bg);
-	background-image: url('./../../img/header/header-bg.jpg');
+	background-image: url('./../img/header/header-bg.jpg');
 	background-size: cover;
 	aspect-ratio: 1440 / 1084;
 
 	color: var(--header-text-color);
 
-	@include retina-bg(url('./../../img/header/header-bg@2x.jpg'));
+	@include retina-bg(url('./../img/header/header-bg@2x.jpg'));
 
 	a {
 		color: var(--header-text-color);
@@ -25,10 +26,10 @@
 			margin: 0 auto;
 			max-width: 606px;
 
+			opacity: 0.8;
+
 			font-size: 24px;
 			line-height: 160%;
-
-			opacity: 0.8;
 		}
 	}
 
@@ -44,5 +45,36 @@
 
 	&__search {
 		margin: 45px auto 0;
+	}
+
+	/* Dots */
+	&__dot-sofa {
+		position: absolute;
+		left: calc(296 * 100% / 1440);
+		top: calc(685 * 100% / 1084);
+
+		transform: translate(0, 0);
+	}
+
+	&__dot-vase {
+		position: absolute;
+		left: calc(114 * 100% / 1440);
+		top: calc(754 * 100% / 1084);
+
+		transform: translate(-50%, -50%);
+	}
+
+	&__dot-item {
+		position: absolute;
+		left: calc(810 * 100% / 1440);
+		top: calc(787 * 100% / 1084);
+
+		transform: translate(-50%, -50%);
+	}
+
+	&__dot-wall {
+		position: absolute;
+		right: calc(46 * 100% / 1440);
+		top: calc(821 * 100% / 1084);
 	}
 }
