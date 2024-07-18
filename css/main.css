@@ -537,11 +537,14 @@ body {
   -webkit-transition: background-color 0.2s ease-in;
   transition: background-color 0.2s ease-in;
 }
+.tab-controls__btn:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
 .tab-controls__btn--active {
   background-color: #fff;
 }
-.tab-controls__btn:hover {
-  background-color: rgba(255, 255, 255, 0.5);
+.tab-controls__btn--active:hover {
+  background-color: #fff;
 }
 
 .card {
