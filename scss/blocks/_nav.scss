@@ -6,4 +6,12 @@
 	&__logo {
 		align-self: center;
 	}
+
+	&__btn {
+		display: none;
+
+		@include tablet() {
+			display: block;
+		}
+	}
 }

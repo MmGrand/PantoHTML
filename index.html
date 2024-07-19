@@ -17,7 +17,15 @@
 				</div>
 				<ul class="nav-list">
 					<li class="nav-list__item">
-						<a href="#!" class="nav-list__link">Furniture</a>
+						<a href="#!" class="nav-list__link nav-list__link--dropdown">Furniture</a>
+						<div class="nav-list__sub-nav">
+							<ul class="sub-nav">
+								<li class="sub-nav__item"><a href="#!" class="sub-nav__link">Home</a></li>
+								<li class="sub-nav__item"><a href="#!" class="sub-nav__link">Chairs</a></li>
+								<li class="sub-nav__item"><a href="#!" class="sub-nav__link">Beds</a></li>
+								<li class="sub-nav__item"><a href="#!" class="sub-nav__link">Sofa</a></li>
+							</ul>
+						</div>
 					</li>
 					<li class="nav-list__item">
 						<a href="#!" class="nav-list__link">Shop</a>
@@ -34,6 +42,10 @@
 					<img class="cart__img" src="./img/icons/cart.svg" alt="cart icon">
 					<div class="cart__count">0</div>
 				</a>
+
+				<button id="open-mobile-nav-btn" class="nav__btn">
+					<img src="./img/icons/mobile-nav.svg" alt="Open navigation">
+				</button>
 			</nav>
 
 			<div class="header__content">
@@ -52,7 +64,7 @@
 					<div class="info-dot__circle"></div>
 					<div class="info-dot__radius"></div>
 				</button>
-				<div class="info-hint none">
+				<div class="info-hint">
 					<label>
 						<input type="radio" name="sofa-color" class="info-hint__radio">
 						<div class="info-hint__radio-fake info-hint__radio-fake--orange"></div>
@@ -75,7 +87,7 @@
 					<div class="info-dot__circle"></div>
 					<div class="info-dot__radius"></div>
 				</button>
-				<div class="info-hint none">
+				<div class="info-hint">
 					<label>
 						<input type="radio" name="sofa-color" class="info-hint__radio">
 						<div class="info-hint__radio-fake info-hint__radio-fake--orange"></div>
@@ -98,7 +110,7 @@
 					<div class="info-dot__circle"></div>
 					<div class="info-dot__radius"></div>
 				</button>
-				<div class="info-hint none">
+				<div class="info-hint">
 					<label>
 						<input type="radio" name="sofa-color" class="info-hint__radio">
 						<div class="info-hint__radio-fake info-hint__radio-fake--orange"></div>
@@ -121,7 +133,7 @@
 					<div class="info-dot__circle"></div>
 					<div class="info-dot__radius"></div>
 				</button>
-				<div class="info-hint none">
+				<div class="info-hint">
 					<label>
 						<input type="radio" name="sofa-color" class="info-hint__radio">
 						<div class="info-hint__radio-fake info-hint__radio-fake--orange"></div>
@@ -140,6 +152,7 @@
 			</div>
 		</div>
 	</header>
+
 	<section class="benefits">
 		<div class="container">
 			<div class="benefits__grid">
@@ -532,6 +545,42 @@
 			</div>
 		</div>
 	</footer>
+
+	<!-- Mobile Nav -->
+	<div id="mobile-nav" class="mobile-nav-wrapper">
+		<div class="mobile-nav-header">
+			<a href="#!" class="mobile-cart">
+				<div class="cart">
+					<img class="cart__img" src="./img/icons/cart.svg" alt="cart icon">
+					<div class="cart__count">0</div>
+				</div>
+				Cart
+			</a>
+
+			<button id="close-mobile-nav-btn" class="mobile-nav-btn-close"><img src="./img/icons/close.svg" alt="Close navigation"></button>
+		</div>
+
+		<ul class="mobile-nav">
+			<li class="mobile-nav__item">
+				<a href="#!" class="mobile-nav__link mobile-nav__link--dropdown">Furniture</a>
+				<ul class="mobile-sub-nav">
+					<li class="mobile-sub-nav__item"><a href="#!" class="mobile-sub-nav__link">Home</a></li>
+					<li class="mobile-sub-nav__item"><a href="#!" class="mobile-sub-nav__link">Chairs</a></li>
+					<li class="mobile-sub-nav__item"><a href="#!" class="mobile-sub-nav__link">Beds</a></li>
+					<li class="mobile-sub-nav__item"><a href="#!" class="mobile-sub-nav__link">Sofa</a></li>
+				</ul>
+			</li>
+			<li class="mobile-nav__item">
+				<a href="#!" class="mobile-nav__link">Shop</a>
+			</li>
+			<li class="mobile-nav__item">
+				<a href="#!" class="mobile-nav__link">About Us</a>
+			</li>
+			<li class="mobile-nav__item">
+				<a href="#!" class="mobile-nav__link">Contact</a>
+			</li>
+		</ul>
+	</div>
 	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 	<script src="./js/main.js"></script>
 </body>
