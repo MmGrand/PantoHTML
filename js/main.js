@@ -1,11 +1,26 @@
 const infoBtns = document.querySelectorAll('.info-dot');
 const infoHints = document.querySelectorAll('.info-hint');
+let lastOpenedHint = null;
 
 // Клик по кнопкам с подсказками
 for(let btn of infoBtns) {
 	btn.addEventListener('click', function (e) {
 		e.stopPropagation();
-		this.parentNode.querySelector('.info-hint').classList.toggle('none');
+
+		const currentHint = this.parentNode.querySelector('.info-hint');
+
+		for(let hint of infoHints) {
+			hint.classList.add('none');
+		}
+
+		// Если текущая подсказка была последней открытой, просто закрыть ее
+		if (lastOpenedHint === currentHint) {
+			lastOpenedHint = null;
+		} else {
+			// Открыть текущую подсказку и запомнить ее
+			currentHint.classList.toggle('none');
+			lastOpenedHint = currentHint;
+		}
 	});
 }
 
@@ -14,6 +29,7 @@ document.addEventListener('click', function () {
 	for(let hint of infoHints) {
 		hint.classList.add('none');
 	}
+	lastOpenedHint = null;
 });
 
 // Запрещаем всплытие события клика наверх при клике на подсказки
@@ -24,24 +40,27 @@ for(let hint of infoHints) {
 // Swiper slider
 const swiper = new Swiper('.swiper', {
   loop: true,
-	slidesPerView: 4,
-	spaceBetween: 42,
+	slidesPerView: 1,
 	freeMode: true,
 
-	// breakpoints: {
-	// 	640: {
-	// 		slidesPerView: 2,
-	// 		spaceBetween: 20,
-	// 	},
-	// 	768: {
-	// 		slidesPerView: 4,
-	// 		spaceBetween: 40,
-	// 	},
+	breakpoints: {
+		600: {
+			slidesPerView: 2,
+			spaceBetween: 20,
+		},
+		920: {
+			slidesPerView: 3,
+			spaceBetween: 20,
+		},
 	// 	1024: {
 	// 		slidesPerView: 5,
 	// 		spaceBetween: 50,
 	// 	},
-	// },
+		1230: {
+			slidesPerView: 4,
+			spaceBetween: 42,
+		},
+	},
 
   navigation: {
     nextEl: '.slider__btn--next',

@@ -5,6 +5,11 @@
 
 	border-radius: 44px;
 	background-color: #eee;
+
+	@include mobile () {
+		max-width: 290px;
+		overflow-x: auto;
+	}
 }
 
 .tab-controls__btn {

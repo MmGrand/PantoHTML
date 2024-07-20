@@ -1,6 +1,4 @@
 .mobile-nav-wrapper{
-	display: none;
-
 	position: absolute;
 	right: 0;
 	top: 0;
@@ -12,13 +10,22 @@
 
 	background-color: var(--footer-bg);
 	color: var(--footer-text-color);
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.3s ease, visibility 0.3s ease;
 
 	a {
 		color: var(--footer-text-color);
+		transition: color 0.1s ease-in;
+
+		&:hover {
+			color: #fff;
+		}
 	}
 
 	&--open {
-		display: block;
+		opacity: 1;
+		visibility: visible;
 	}
 }
 

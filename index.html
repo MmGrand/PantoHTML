@@ -51,20 +51,22 @@
 			<div class="header__content">
 				<h1 class="header__title">Make your interior more minimalistic & modern</h1>
 				<p>Turn your room with panto into a lot more minimalist and modern with ease and speed</p>
-				<form action="" class="header__search search-form">
-					<input placeholder="Search furniture" type="text" class="search-form__input" autocomplete="off">
-					<button class="search-form__btn">
-						<img src="./img/icons/search.svg" alt="search icon">
-					</button>
-				</form>
+				<div class="header__search">
+					<form action="" class="search-form">
+						<input placeholder="Search furniture" type="text" class="search-form__input" autocomplete="off">
+						<button class="search-form__btn">
+							<img src="./img/icons/search.svg" alt="search icon">
+						</button>
+					</form>
+				</div>
 			</div>
 
-			<div class="header__dot-sofa">
+			<div class="header__dot header__dot--sofa">
 				<button class="info-dot">
 					<div class="info-dot__circle"></div>
 					<div class="info-dot__radius"></div>
 				</button>
-				<div class="info-hint">
+				<div class="info-hint none">
 					<label>
 						<input type="radio" name="sofa-color" class="info-hint__radio">
 						<div class="info-hint__radio-fake info-hint__radio-fake--orange"></div>
@@ -82,12 +84,12 @@
 				</div>
 			</div>
 
-			<div class="header__dot-vase">
+			<div class="header__dot header__dot--vase">
 				<button class="info-dot">
 					<div class="info-dot__circle"></div>
 					<div class="info-dot__radius"></div>
 				</button>
-				<div class="info-hint">
+				<div class="info-hint none">
 					<label>
 						<input type="radio" name="sofa-color" class="info-hint__radio">
 						<div class="info-hint__radio-fake info-hint__radio-fake--orange"></div>
@@ -105,12 +107,12 @@
 				</div>
 			</div>
 
-			<div class="header__dot-item">
+			<div class="header__dot header__dot--item">
 				<button class="info-dot">
 					<div class="info-dot__circle"></div>
 					<div class="info-dot__radius"></div>
 				</button>
-				<div class="info-hint">
+				<div class="info-hint none">
 					<label>
 						<input type="radio" name="sofa-color" class="info-hint__radio">
 						<div class="info-hint__radio-fake info-hint__radio-fake--orange"></div>
@@ -128,12 +130,12 @@
 				</div>
 			</div>
 
-			<div class="header__dot-wall">
+			<div class="header__dot header__dot--wall">
 				<button class="info-dot">
 					<div class="info-dot__circle"></div>
 					<div class="info-dot__radius"></div>
 				</button>
-				<div class="info-hint">
+				<div class="info-hint none">
 					<label>
 						<input type="radio" name="sofa-color" class="info-hint__radio">
 						<div class="info-hint__radio-fake info-hint__radio-fake--orange"></div>
@@ -156,7 +158,9 @@
 	<section class="benefits">
 		<div class="container">
 			<div class="benefits__grid">
-				<h2 class="benefits__title">Why Choosing Us</h2>
+				<div class="benefits__title">
+					<h2 class="title-2">Why Choosing Us</h2>
+				</div>
 				<div class="benefit">
 					<h3 class="benefit__title">Luxury facilities</h3>
 					<p class="benefit__text">The advantage of hiring a workspace with us is that givees you comfortable service and all-around facilities.</p>
@@ -180,7 +184,9 @@
 
 	<section class="products">
 		<div class="container">
-			<h2 class="products__title">Best Selling Product</h2>
+			<div class="products__title">
+				<h2 class="title-2">Best Selling Product</h2>
+			</div>
 			<div class="products__tabs">
 				<div class="tab-controls">
 					<button data-tab="all" class="tab-controls__btn tab-controls__btn--active">All</button>
